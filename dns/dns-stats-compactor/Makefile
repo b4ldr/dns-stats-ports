@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTNAME=	dns-stats
+PORTNAME=	dns-stats-compactor
 PORTVERSION=	0.11.0
 CATEGORIES=	dns
 
