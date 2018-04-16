@@ -26,7 +26,7 @@ LIB_DEPENDS=	libtins.so:net/libtins \
 
 USE_RC_SUBR=	compactor
 
-USES=		compiler:c++11-lang gmake pkgconfig
+USES=		compiler:c++11-lang gmake pkgconfig autoreconf
 
 GNU_CONFIGURE=	yes
 
