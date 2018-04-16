@@ -1,11 +1,15 @@
 # $FreeBSD$
 
 PORTNAME=	dns-stats
-PORTVERSION=	0.9.32
+PORTVERSION=	0.11.0
 CATEGORIES=	dns
 
 MAINTAINER=	jim@sinodun.com
 COMMENT=	DNS traffic capture and reconstruction
+USE_GITHUB= yes
+GH_ACCOUNT= dns-stats
+GH_PROJECT= compactor
+GH_TAGNAME= 39f67fd
 
 LICENSE=	MPL
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
