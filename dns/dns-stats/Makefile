@@ -28,6 +28,7 @@ USE_RC_SUBR=	compactor
 
 USES=		compiler:c++11-lang gmake pkgconfig autoreconf
 
+USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 
 DATADIR=	/var/lib/${PORTNAME}
