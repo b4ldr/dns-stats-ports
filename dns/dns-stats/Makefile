@@ -26,9 +26,8 @@ LIB_DEPENDS=	libtins.so:net/libtins \
 
 USE_RC_SUBR=	compactor
 
-USES=		compiler:c++11-lang gmake pkgconfig autoreconf
+USES=		autoreconf libtool compiler:c++11-lang gmake pkgconfig
 
-USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 
 DATADIR=	/var/lib/${PORTNAME}
