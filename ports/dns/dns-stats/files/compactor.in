@@ -1,0 +1,41 @@
+#! /bin/sh
+#
+# $FreeBSD$
+#
+
+# PROVIDE: compactor
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf to enable compactor:
+#
+#compactor_enable="YES"
+
+. /etc/rc.subr
+
+name="compactor"
+rcvar="compactor_enable"
+
+extra_commands="reload"
+
+load_rc_config $name
+
+: ${compactor_enable:="NO"}
+: ${compactor_cpuset="0"}
+: ${compactor_maxmem="1048756"}
+
+start_precmd="${name}_prestart"
+
+compactor_prestart()
+{
+    if [ -n "${compactor_cpuset}" ]; then
+        command="cpuset -l ${compactor_cpuset} ${command}"
+    fi
+    if [ -n "${compactor_maxmem}" ]; then
+        ulimit -m ${compactor_maxmem}
+    fi
+}
+
+command="%%PREFIX%%/bin/${name}"
+run_rc_command "$1"

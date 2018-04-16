@@ -1,0 +1,10 @@
+@sample %%ETCDIR%%/compactor.conf.sample
+bin/compactor
+bin/inspector
+man/man1/inspector.1.gz
+man/man1/compactor.1.gz
+@dir %%DATADIR%%/pcap/ignored
+@dir %%DATADIR%%/pcap/raw
+@dir %%DATADIR%%/pcap
+@dir %%DATADIR%%/cdns
+@dir %%DATADIR%%

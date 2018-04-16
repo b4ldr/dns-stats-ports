@@ -1,0 +1,4 @@
+dns-stats provides tools for capturing DNS traffic in a space and resource
+efficient format.
+
+WWW: http://libtins.github.io/
